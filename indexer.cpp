@@ -140,6 +140,6 @@ int main(int argc, char **argv) {
     }
     auto endTime = system_clock::now();
     auto duration = duration_cast<microseconds>(endTime - startTime);
-    std::cout << "TIME: " << double(duration.count()) * microseconds::period::num / microseconds::period::den << "s" << endl;
+    std::cout << double(duration.count()) * microseconds::period::num / microseconds::period::den << endl;
 }
 

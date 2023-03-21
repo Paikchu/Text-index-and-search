@@ -46,7 +46,7 @@ int main(int argc, char **argv) {
         enquire.set_query(query);
 
         Xapian::MSet matches = enquire.get_mset(0, top_k);
-        cout << "mset size is " << matches.size() << endl;
+        // cout << "mset size is " << matches.size() << endl;
 
         for (Xapian::MSetIterator match = matches.begin(); match != matches.end(); match++) {
             Xapian::Document doc = match.get_document();
@@ -61,8 +61,8 @@ int main(int argc, char **argv) {
                 description = regex_replace(description, pattern, new_keyword);
 
             }
-            cout << name << endl;
-            cout << description << endl;
+            // cout << name << endl;
+            // cout << description << endl;
         }
     } else {
         Xapian::Query query(
@@ -74,7 +74,7 @@ int main(int argc, char **argv) {
             enquire.set_query(query);
 
             Xapian::MSet matches = enquire.get_mset(0, top_k);
-            cout << "mset size is " << matches.size() << endl;
+            // cout << "mset size is " << matches.size() << endl;
 
             for (Xapian::MSetIterator match = matches.begin(); match != matches.end(); match++) {
                 Xapian::Document doc = match.get_document();
@@ -89,12 +89,9 @@ int main(int argc, char **argv) {
                     description = regex_replace(description, pattern, new_keyword);
 
                 }
-                cout << name << endl;
-                cout << description << endl;
             }
     }
     auto endTime = system_clock::now();
     auto duration = duration_cast<microseconds>(endTime - startTime);
-    std::cout << "TIME: " << double(duration.count()) * microseconds::period::num / microseconds::period::den << "s"
-              << endl;
+    std::cout << double(duration.count()) * microseconds::period::num / microseconds::period::den << endl;
 }
