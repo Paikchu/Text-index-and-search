@@ -7,5 +7,4 @@ metadata.txt
 indexer
 searcher
 *.txt
-*.jpg
 .DS_Store
