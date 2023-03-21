@@ -49,6 +49,7 @@ plt.xlim(100, 45000)
 plt.ylim(0, 30)
 plt.title("Indexing time versus data size")
 plt.savefig('assets/1.jpg')
+plt.close()
 
 plt.plot(corpus, searcher_time)
 plt.ylabel("searcher time")
@@ -57,6 +58,7 @@ plt.xlim(100, 45000)
 plt.ylim(0.1, 0.3)
 plt.title("Search time versus data size")
 plt.savefig('assets/2.jpg')
+plt.close()
 
 
 search_test_AND = []
@@ -81,6 +83,7 @@ plt.xlim(2, 20)
 plt.ylim(0.1, 0.3)
 plt.title("Search time versus number of OR-keywords in the query")
 plt.savefig('assets/4.jpg')
+plt.close()
 
 for i in corpus_size:
     search_cmd = "./searcher database 10 "
@@ -97,6 +100,7 @@ plt.xlim(2, 20)
 plt.ylim(0.1, 0.3)
 plt.title("Search time versus number of AND-keywords in the query")
 plt.savefig('assets/3.jpg')
+plt.close()
 
 print(search_test_AND)
 print(search_test_OR)
