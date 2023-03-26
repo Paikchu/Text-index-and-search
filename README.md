@@ -24,6 +24,6 @@ make
 
 ![4](./assets/4.jpg)
 
-![5](./assets/top-K search time versus K.png)
+![5](./assets/5.png)
 
-![6](./assets/topk_search_time_vs_cardinality.png)
+![6](./assets/6.png)
